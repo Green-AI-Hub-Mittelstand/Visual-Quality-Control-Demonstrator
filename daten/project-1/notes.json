@@ -1,0 +1,21 @@
+{
+  "categories": [
+    {
+      "id": 0,
+      "name": "Crack"
+    },
+    {
+      "id": 1,
+      "name": "Missing"
+    },
+    {
+      "id": 2,
+      "name": "Points"
+    }
+  ],
+  "info": {
+    "year": 2024,
+    "version": "1.0",
+    "contributor": "Label Studio"
+  }
+}

@@ -1,0 +1,8 @@
+train: /Users/cowolff/Documents/GitHub/quality-control-demonstrator/daten/project-1/images  # subfolder with training images
+val: /Users/cowolff/Documents/GitHub/quality-control-demonstrator/daten/project-1/images    # subfolder with validation images (can be the same as train for testing)
+
+# Number of classes
+nc: 3  # number of classes
+
+# Class names
+names: ['Crack', 'Missing', 'Points']
