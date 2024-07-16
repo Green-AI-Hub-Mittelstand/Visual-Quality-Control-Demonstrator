@@ -89,7 +89,18 @@ To use the environment, you have to install this repository as a pip package. Al
 
 ## Usage
 
-More information about the project, repository structure, features, screenshots
+To train your own yolo detection models, refer to the yolo_error_detect.ipynb notebook. Afterwards your trained models have to be copied to the models folder and the paths inside of app.py have to be updated accordingly.
+
+If you want to use the web interface to use the models. Follow the following steps:
+
+1. Navigate to the repository with your terminal
+2. Ensure that you have all libraries installed
+3. Start the web interface with the following command:
+  ```sh
+   python3 app.py
+   ```
+
+Important: By executing these steps, you start the web app with the debugging server of flask. This is not safe for production. Please refer to the official flask documentation for deployments.
 
 
 ## Contributing
