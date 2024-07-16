@@ -2,8 +2,6 @@ import cv2
 import torch
 import numpy as np
 from ultralytics import YOLO
-from classifier import SimpleCNN
-from grad_cam import GradCam
 import time
 from torchvision import datasets, transforms
 from PIL import Image
@@ -99,19 +97,11 @@ def analyse_and_classify(yolo_model, grad_cam, transform, original_img):
 def analyse_thread(yolo_path, classifier_path, grad_target_layer, tasks, results, device):
     yolo_model = YOLO(yolo_path, verbose=False).to(device)
     classifier = YOLO(classifier_path, verbose=False).to(device)
-    # grad_cam = GradCam(classifier, classifier._modules[grad_target_layer])
-
-    img_transform = transforms.Compose([
-        transforms.Resize((256, 256)),
-        transforms.ToTensor(),
-        transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),
-    ])
     
     while True:
         for task_id, task in tasks.items():
             if task['state'] == 'PENDING':
                 img = cv2.imread(task['image'])
-                # result_images = analyse_and_classify(yolo_model, grad_cam, img_transform, img)
                 result_images = analyse_and_classify_yolo(yolo_model, classifier, img)
                 results[task_id] = {}
                 results[task_id]['state'] = 'SUCCESS'

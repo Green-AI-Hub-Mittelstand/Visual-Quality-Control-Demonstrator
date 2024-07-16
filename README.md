@@ -32,7 +32,7 @@
 
 ## About The Project
 
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+This repository contains the code for the visual quality control demonstrator, which uses an AI (two combined YOLO models) to check whether a product is faulty. This demosntrator was developed as part of the Green-AI Hub Initiative, funded by the German Federal Ministry for the Environment, Nature Conservation, Nuclear Safety and Consumer Protection.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

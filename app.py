@@ -28,7 +28,6 @@ def submit():
     file_storage = request.files['image']
     nparr = np.fromstring(file_storage.read(), np.uint8)
     frame = cv2.imdecode(nparr, cv2.IMREAD_COLOR)
-    frame = cv2.imread("static/img/2_original.jpg")
     frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
     image = Image.fromarray(frame)
     task_id = max(tasks.keys()) + 1
@@ -64,8 +63,7 @@ def heatmap_id(task_id):
 def status():
     file_storage = request.files['frame']
     nparr = np.fromstring(file_storage.read(), np.uint8)
-    frame = cv2.imread("static/img/2_original.jpg")
-    # frame = cv2.imdecode(nparr, cv2.IMREAD_COLOR)
+    frame = cv2.imdecode(nparr, cv2.IMREAD_COLOR)
     frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
     img, _, _, _ = predict_and_detect(yolo_model, frame)
     image = Image.fromarray(np.array(img, dtype=np.uint8))
